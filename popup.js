@@ -39,10 +39,13 @@ chrome.tabs.getSelected(null, function(tab) {
 
 function myFunction(tablink) {
   // do stuff here
-  document.getElementById("demo").innerHTML = tablink;
+  var d = new Date();
+  var l = getLocation(tablink);
+  document.getElementById("demo").innerHTML = l.hostname + "\n" + d.getHours() +":"+ d.getMinutes() +":"+ d.getSeconds();
 }
 
-
-function getLocation(){
-  document.getElementById("demo").innerHTML = "JS";
-}
+var getLocation = function(href) {
+    var l = document.createElement("a");
+    l.href = href;
+    return l;
+};
