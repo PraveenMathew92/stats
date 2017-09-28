@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+/*document.addEventListener('DOMContentLoaded', function() {
   var checkPageButton = document.getElementById('checkPage');
   checkPageButton.addEventListener('click', function() {
 
@@ -18,3 +18,31 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }, false);
 }, false);
+
+
+
+
+
+chrome.tabs.getSelected(null,function(tab) {
+    var tablink = tab.url;
+    console.log(tablink);
+});
+
+
+function getLocation(){
+  document.getElementById("demo").innerHTML = window.location.hostname;
+}*/
+
+chrome.tabs.getSelected(null, function(tab) {
+    myFunction(tab.url);
+});
+
+function myFunction(tablink) {
+  // do stuff here
+  document.getElementById("demo").innerHTML = tablink;
+}
+
+
+function getLocation(){
+  document.getElementById("demo").innerHTML = "JS";
+}

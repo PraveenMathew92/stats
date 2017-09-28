@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
 
-  "name": "Stats",
+  "name": "Chrome Journal",
   "description": "This extension will analyze a page stats",
   "version": "1.0",
 
@@ -9,7 +9,6 @@
    "default_icon": "icon.jpg",
    "default_popup": "popup.html"
   },
-  "permissions": [
-   "activeTab"
-   ]
+
+  "permissions": ["tabs"]
 }
